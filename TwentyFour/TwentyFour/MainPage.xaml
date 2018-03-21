@@ -1,0 +1,62 @@
+﻿<ContentPage 
+    x:Class="TwentyFour.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" BackgroundColor="Black">
+
+    <ContentPage.Content>
+    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height=".75*"></RowDefinition>
+            <RowDefinition Height=".5*"></RowDefinition>
+            <RowDefinition Height=".5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnNumber1" Clicked="AddNumber" ></Button>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnNumber2" Clicked="AddNumber" ></Button>
+                <Button Grid.Row="1" Grid.Column="0" x:Name="btnNumber3" Clicked="AddNumber" ></Button>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="btnNumber4" Clicked="AddNumber" ></Button>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnPlus" Clicked="AddSign" Text="+" FontSize="Large"></Button>
+                <Button Grid.Column="1" x:Name="btnMinus" Clicked="AddSign" Text="-" FontSize="Large"></Button>
+                <Button Grid.Column="2" x:Name="btnDivide" Clicked="AddSign" Text="/" FontSize="Large">/</Button>
+                <Button Grid.Column="3" x:Name="btnMultiply" Clicked="AddSign" Text="*" FontSize="Large"></Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" x:Name="txtCalc" FontSize="36" ></Label>
+            <Label Grid.Column="1" x:Name="txtSum"  FontSize="36" >0</Label>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" x:Name="btnReset" Clicked="btnReset_Click" Text="Reset"></Button>
+                <Button Grid.Column="1" x:Name="btnNewGame" Clicked="btnNewGame_Click" Text="New"></Button>
+                <Button Grid.Column="2" x:Name="btnSolution" Clicked="btnSolution_Click" Text="Solution"></Button>
+        </Grid>
+
+    </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
